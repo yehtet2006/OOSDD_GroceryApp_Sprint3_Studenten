@@ -10,7 +10,10 @@ namespace Grocery.App
             InitializeComponent();
 
             //MainPage = new AppShell();
-            MainPage = new LoginView(viewModel);
+            MainPage = new NavigationPage(new LoginView(viewModel));
+           
         }
+
+        
     }
 }

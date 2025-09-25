@@ -1,6 +1,7 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Grocery.App.Views;
 using Grocery.Core.Interfaces.Services;
 using Grocery.Core.Models;
 
@@ -10,6 +11,8 @@ namespace Grocery.App.ViewModels
     {
         private readonly IAuthService _authService;
         private readonly GlobalViewModel _global;
+        private readonly RegisterView _registerView;
+
 
         [ObservableProperty]
         private string email = "user3@mail.com";
@@ -41,5 +44,14 @@ namespace Grocery.App.ViewModels
                 LoginMessage = "Ongeldige inloggegevens.";
             }
         }
+
+        [RelayCommand]
+        public async Task GoToRegisterPage()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(_registerView);
+        }
+
+        
+       
     }
 }
