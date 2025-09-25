@@ -4,6 +4,8 @@ using Grocery.App.Views;
 using Grocery.Core.Exceptions;
 using Grocery.Core.Interfaces.Services;
 using Grocery.Core.Models;
+
+
 namespace Grocery.App.ViewModels
 {
     public partial class RegisterViewModel : BaseViewModel

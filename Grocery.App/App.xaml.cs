@@ -8,12 +8,7 @@ namespace Grocery.App
         public App(LoginViewModel viewModel)
         {
             InitializeComponent();
-
-            //MainPage = new AppShell();
             MainPage = new NavigationPage(new LoginView(viewModel));
-           
         }
-
-        
     }
 }

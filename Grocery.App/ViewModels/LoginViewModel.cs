@@ -23,10 +23,17 @@ namespace Grocery.App.ViewModels
         [ObservableProperty]
         private string loginMessage;
 
-        public LoginViewModel(IAuthService authService, GlobalViewModel global)
+        public LoginViewModel(IAuthService authService, GlobalViewModel global, RegisterView registerView)
         { //_authService = App.Services.GetServices<IAuthService>().FirstOrDefault();
             _authService = authService;
             _global = global;
+            _registerView = registerView;
+        }
+        
+        [RelayCommand]
+        public async Task GoToRegisterPage()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(_registerView);
         }
 
         [RelayCommand]
@@ -44,12 +51,7 @@ namespace Grocery.App.ViewModels
                 LoginMessage = "Ongeldige inloggegevens.";
             }
         }
-
-        [RelayCommand]
-        public async Task GoToRegisterPage()
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(_registerView);
-        }
+        
 
         
        
