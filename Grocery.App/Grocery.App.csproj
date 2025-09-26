@@ -67,6 +67,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Grocery.Core.Data\Grocery.Core.Data.csproj" />
 	  <ProjectReference Include="..\Grocery.Core\Grocery.Core.csproj" />
+	  <ProjectReference Include="..\TestCore\TestCore.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,6 +84,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RegisterView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
