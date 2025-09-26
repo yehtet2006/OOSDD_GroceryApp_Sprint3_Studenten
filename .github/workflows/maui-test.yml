@@ -6,6 +6,7 @@ on:
       - main
       - develop
       - feature/**
+      - infra/runner-toevoegen
   pull_request:
     branches:
       - main
