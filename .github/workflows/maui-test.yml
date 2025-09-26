@@ -31,8 +31,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build solution
-      run: dotnet build --configuration Release --no-restore
+    - name: Build the application
+      run: dotnet build Grocery.App/Grocery.App.csproj -f net8.0-android --configuration Release --no-restore
 
     - name: Run tests
       run: dotnet test TestCore/TestCore.csproj -f net8.0 --configuration Release --no-restore --verbosity normal --no-build --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
