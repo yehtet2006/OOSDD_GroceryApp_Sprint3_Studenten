@@ -26,6 +26,13 @@ namespace Grocery.Core.Services
         {
             return _clientRepository.Get(id);
         }
+        
+        public Client Create(string email, string password, string name)
+        {
+            Client client = new Client(-1, name, email, password);
+            _clientRepository.Add(client);
+            return client;
+        }
 
         public List<Client> GetAll()
         {
